@@ -9,20 +9,21 @@ Analysis on collision between random with different seeds.
 I came across a situation where a random function using two different [seeds](https://en.wikipedia.org/wiki/Random_seed) yields the same integer value. The situation can be described with two calls of the same random function (_R_):
 
 $$ x = R(\text{seedx}, \text{size}) $$
+
 $$ y = R(\text{seedy}, \text{size}) $$
 
 where _size_ is the maximum value that _R_ can return. 
 
-The collision (i.e., when _x_ is equal to _y_) is understandably possible especially if _size_ is small. Anyway, I wrote this code to investigate a little this case. In particular, when _x_ and _y_ keep on having the same value even if the _size_ is changed.
+The collision (i.e., when _x_ is equal to _y_) is understandably possible especially if the _size_ is small. Anyway, I wrote this code to investigate a little this case. In particular, when _x_ and _y_ keep on having the same values even if the _size_ changes.
 
 ### A few observations
-The following histogram show the distribution of calling the random function with 10,000 different seeds:
+The following histogram shows the distribution of calling the random function with 10,000 different seeds:
 
 ![histogram 1](/images/histogram1.png)
 
 The last bin is smaller simply because it contains a set of only 24 possible values (1001-1024) instead of the 200 of the other bins.
 
-The following histogram show the distribution of the random collision between the _seedx_ (equal to 1) and the 10,000 different seeds (_seedy_) over 100 random calls:
+The following histogram shows the distribution of the random collision between the _seedx_ (equal to 1) and the 10,000 different seeds (_seedy_) over 100 random calls:
 
 ![histogram 2](/images/histogram2.png)
 
@@ -32,9 +33,9 @@ $$ \frac{10000}{1024} \approx 10 $$
 
 More surprising, there are two _seedy_ that have 30 or more random values in common with _seedx_. The 100 calls where performed by incrementing the _size_ of 512 each time.
 
-For example _seedx_ equal to 1 and _seedy_ equal to 6401:
+For example, with _seedx_ equal to 1 and _seedy_ equal to 6401:
 
- size | equal | x | y |
+ size | x = y | x | y |
 ------|-------|---|----
  1024 | True | 275 | 275
  1536 | True | 275 | 275
