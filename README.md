@@ -35,105 +35,53 @@ More surprising, there are two _seedy_ that have 30 or more random values in com
 
 For example, with _seedx_ equal to 1 and _seedy_ equal to 6401:
 
- size | x = y | x | y |
-------|-------|---|----
- 1024 | True | 275 | 275
- 1536 | True | 275 | 275
- 2048 | True | 550 | 550
- 2560 | True | 550 | 550
- 3072 | True | 550 | 550
- 3584 | True | 550 | 550
- 4096 | True | 1100 | 1100
- 4608 | True | 1100 | 1100
- 5120 | True | 1100 | 1100
- 5632 | True | 1100 | 1100
- 6144 | True | 1100 | 1100
- 6656 | True | 1100 | 1100
- 7168 | True | 1100 | 1100
- 7680 | True | 1100 | 1100
- 8192 | True | 2201 | 2201
- 8704 | True | 2201 | 2201
- 9216 | True | 2201 | 2201
- 9728 | True | 2201 | 2201
- 10240 | True | 2201 | 2201
- 10752 | True | 2201 | 2201
- 11264 | True | 2201 | 2201
- 11776 | True | 2201 | 2201
- 12288 | True | 2201 | 2201
- 12800 | True | 2201 | 2201
- 13312 | True | 2201 | 2201
- 13824 | True | 2201 | 2201
- 14336 | True | 2201 | 2201
- 14848 | True | 2201 | 2201
- 15360 | True | 2201 | 2201
- 15872 | True | 2201 | 2201
- 16384 | False | 4402 | 4403
- 16896 | False | 4402 | 4403
- 17408 | False | 4402 | 4403
- 17920 | False | 4402 | 4403
- 18432 | False | 4402 | 4403
- 18944 | False | 4402 | 4403
- 19456 | False | 4402 | 4403
- 19968 | False | 4402 | 4403
- 20480 | False | 4402 | 4403
- 20992 | False | 4402 | 4403
- 21504 | False | 4402 | 4403
- 22016 | False | 4402 | 4403
- 22528 | False | 4402 | 4403
- 23040 | False | 4402 | 4403
- 23552 | False | 4402 | 4403
- 24064 | False | 4402 | 4403
- 24576 | False | 4402 | 4403
- 25088 | False | 4402 | 4403
- 25600 | False | 4402 | 4403
- 26112 | False | 4402 | 4403
- 26624 | False | 4402 | 4403
- 27136 | False | 4402 | 4403
- 27648 | False | 4402 | 4403
- 28160 | False | 4402 | 4403
- 28672 | False | 4402 | 4403
- 29184 | False | 4402 | 4403
- 29696 | False | 4402 | 4403
- 30208 | False | 4402 | 4403
- 30720 | False | 4402 | 4403
- 31232 | False | 4402 | 4403
- 31744 | False | 4402 | 4403
- 32256 | False | 4402 | 4403
- 32768 | False | 8805 | 8806
- 33280 | False | 8805 | 8806
- 33792 | False | 8805 | 8806
- 34304 | False | 8805 | 8806
- 34816 | False | 8805 | 8806
- 35328 | False | 8805 | 8806
- 35840 | False | 8805 | 8806
- 36352 | False | 8805 | 8806
- 36864 | False | 8805 | 8806
- 37376 | False | 8805 | 8806
- 37888 | False | 8805 | 8806
- 38400 | False | 8805 | 8806
- 38912 | False | 8805 | 8806
- 39424 | False | 8805 | 8806
- 39936 | False | 8805 | 8806
- 40448 | False | 8805 | 8806
- 40960 | False | 8805 | 8806
- 41472 | False | 8805 | 8806
- 41984 | False | 8805 | 8806
- 42496 | False | 8805 | 8806
- 43008 | False | 8805 | 8806
- 43520 | False | 8805 | 8806
- 44032 | False | 8805 | 8806
- 44544 | False | 8805 | 8806
- 45056 | False | 8805 | 8806
- 45568 | False | 8805 | 8806
- 46080 | False | 8805 | 8806
- 46592 | False | 8805 | 8806
- 47104 | False | 8805 | 8806
- 47616 | False | 8805 | 8806
- 48128 | False | 8805 | 8806
- 48640 | False | 8805 | 8806
- 49152 | False | 8805 | 8806
- 49664 | False | 8805 | 8806
- 50176 | False | 8805 | 8806
- 50688 | False | 8805 | 8806
- 51200 | False | 8805 | 8806
- 51712 | False | 8805 | 8806
+ n. test | size | x = y | x    | y    |
+---------|------|-------|------|-------
+ 1       | 1024 | True  | 275  | 275
+ 2       | 1536 | True | 275 | 275
+ 3       | 2048 | True | 550 | 550
+ 4       | 2560 | True | 550 | 550
+ 5       | 3072 | True | 550 | 550
+ 6       | 3584 | True | 550 | 550
+ 7       | 4096 | True | 1100 | 1100
+ 8       | 4608 | True | 1100 | 1100
+ 9       | 5120 | True | 1100 | 1100
+ 10      | 5632 | True | 1100 | 1100
+ 11      | 6144 | True | 1100 | 1100
+ 12      | 6656 | True | 1100 | 1100
+ 13      | 7168 | True | 1100 | 1100
+ 14      | 7680 | True | 1100 | 1100
+ 15      | 8192 | True | 2201 | 2201
+ 16      | 8704 | True | 2201 | 2201
+ 17      | 9216 | True | 2201 | 2201
+ 18      | 9728 | True | 2201 | 2201
+ 19      | 10240 | True | 2201 | 2201
+ 20      | 10752 | True | 2201 | 2201
+ 21      | 11264 | True | 2201 | 2201
+ 22      | 11776 | True | 2201 | 2201
+ 23      | 12288 | True | 2201 | 2201
+ 24      | 12800 | True | 2201 | 2201
+ 25      | 13312 | True | 2201 | 2201
+ 26      | 13824 | True | 2201 | 2201
+ 27      | 14336 | True | 2201 | 2201
+ 28      | 14848 | True | 2201 | 2201
+ 29      | 15360 | True | 2201 | 2201
+ 30      | 15872 | True | 2201 | 2201
+ 31      | 16384 | False | 4402 | 4403
+ 32      | 16896 | False | 4402 | 4403
+ 33      | 17408 | False | 4402 | 4403
+ 34      | 17920 | False | 4402 | 4403
+ 35      | 18432 | False | 4402 | 4403
+ 36      | ..... | False | .... | ....
+ 
+ This is clearly not compatible with a [truly random function](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) because, similar to rolling two dice, the probability of getting any specific number (_k_) from both seeds would be:
+
+$$ P (x = y = k) = \frac{1}{\text{size}} \cdot \frac{1}{\text{size}} $$
+
+ and the probability of getting two equal numbers for a specific size should be:
+
+ $$ P (x = y) = \frac{\text{size}}{\text{size} \cdot \text{size}} = \frac{1}{\text{size}} $$
+
+therefore in a truly random environment, the probability of getting the same number for the first 2 sizes is:
+
+ $$ P = \frac{1}{1024} \cdot \frac{1}{1536} \approx 6 \cdot 10^{-7}  $$
